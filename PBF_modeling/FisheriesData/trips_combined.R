@@ -80,7 +80,7 @@ pbf_trip_freq <- trips %>%
     freq_PBF_trips=n_PBF_trips/n_trips,
     freq_PBF_trips_over_all=n_PBF_trips/sum(n_trips))
   
-write.csv(trips,file="./FisheriesData/Clean/Combined/clean_trips_combined_nonconfidential.csv",row.names=F)
+write.csv(trips,file="./FisheriesData/Clean/Combined/clean_trips_combined.csv",row.names=F)
 
   
 
