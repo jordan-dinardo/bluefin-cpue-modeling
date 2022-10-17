@@ -12,6 +12,8 @@ catch_dat$year_month_blk <- paste(catch_dat$year,catch_dat$month,catch_dat$blk,s
 
 #Read in environmental data (broadscale and finescale)
 env_dat_broad <- read.csv("./EnvironmentalData/Broadscale/envdata_broadscale.csv",stringsAsFactors = F)
+
+
 # Still need to prepare finescale environmental data
 #env_dat_fine <- read.csv("./EnvironmentalData/Finescale/envdata_finescale_block.csv",stringsAsFactors = )
 #env_dat_fine$year_month_blk <- paste(env_dat_fine$year,env_dat_fine$month,env_dat_fine$Block,sep="_")
