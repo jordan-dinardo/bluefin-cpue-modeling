@@ -7,13 +7,14 @@
 library(tidyverse)
 
 #Read in clean_trips_combined_nonconfidential.csv
-catch_dat <- read.csv("./FisheriesData/Clean/Combined/clean_trips_combined_nonconfidential.csv",stringsAsFactors = F)
+catch_dat <- read.csv("./FisheriesData/Clean/Combined/clean_trips_combined.csv",stringsAsFactors = F)
 catch_dat$year_month_blk <- paste(catch_dat$year,catch_dat$month,catch_dat$blk,sep="_")
 
 #Read in environmental data (broadscale and finescale)
 env_dat_broad <- read.csv("./EnvironmentalData/Broadscale/envdata_broadscale.csv",stringsAsFactors = F)
-env_dat_fine <- read.csv("./EnvironmentalData/Finescale/envdata_finescale.csv",stringsAsFactors = )
-env_dat_fine$year_month_blk <- paste(env_dat_fine$year,env_dat_fine$month,env_dat_fine$Block,sep="_")
+# Still need to prepare finescale environmental data
+#env_dat_fine <- read.csv("./EnvironmentalData/Finescale/envdata_finescale_block.csv",stringsAsFactors = )
+#env_dat_fine$year_month_blk <- paste(env_dat_fine$year,env_dat_fine$month,env_dat_fine$Block,sep="_")
 
 #Read in blk information
 blk_dat <- read.csv("./CDFWBlocks/block_locaiton.csv",stringsAsFactors = F)
