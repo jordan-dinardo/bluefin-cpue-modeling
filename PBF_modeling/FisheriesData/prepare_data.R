@@ -47,5 +47,5 @@ catch_dat <- catch_dat%>%
     pbf_presence=ifelse(pbf_catch==0,0,1) # presence
   )
 
-write.csv(catch_dat,"./FisheriesData/Prepared/pbf_nominal_cpue_data.csv")
+write.csv(catch_dat,"./FisheriesData/Prepared/pbf_nominal_cpue_data_block.csv")
 
