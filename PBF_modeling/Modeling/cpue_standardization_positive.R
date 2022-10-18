@@ -10,6 +10,7 @@ library(tidyverse);library(mgcv);library(zoo)
 dat <- read.csv("./FisheriesData/Prepared/pbf_nominal_cpue_data_block.csv")
 dat_pos <- subset(dat,pbf_presence>0)
 dat_pos <- na.omit(dat_pos)
+
 #change class of var for modeling 
 var.factor<-c("trip_type","trip_id","new_vessel_id","year_month","year_month_block","trip_event_id","block")
 var.numeric<-c("year","month","n_anglers","angler_hrs_trip","angler_hrs_blk","nominal_cpue","pbf_presence","pdo","enso","long","lat")
