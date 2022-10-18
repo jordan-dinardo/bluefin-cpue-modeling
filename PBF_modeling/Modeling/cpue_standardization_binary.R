@@ -9,13 +9,9 @@ library(tidyverse);library(mgcv);library(zoo)
 #Read in prepared data
 dat <- read.csv("./FisheriesData/Prepared/pbf_nominal_cpue_data_block.csv")
 
-dat$year_month <- as.yearmon(dat$year_month, "%y-%b")
-dat$year_month <- as.factor(dat$year_month)
-dat$year <- as.numeric(dat$year)
-dat$month <- as.numeric(dat$month)
 #change class of var for modeling 
-var.factor<-c("year","month","trip_type","trip_id","new_vessel_id","year_month","year_month_block","trip_event_id","block")
-var.numeric<-c("n_anglers","angler_hrs_trip","angler_hrs_blk","nominal_cpue","pbf_presence","pdo","enso","long","lat")
+var.factor<-c("trip_type","trip_id","new_vessel_id","year_month","year_month_block","trip_event_id","block")
+var.numeric<-c("year","month","n_anglers","angler_hrs_trip","angler_hrs_blk","nominal_cpue","pbf_presence","pdo","enso","long","lat")
 
 dat[,var.factor] <- lapply(dat[,var.factor],as.factor)
 dat[,var.numeric] <- lapply(dat[,var.numeric],as.numeric)  
