@@ -31,7 +31,7 @@ fits_pos[[1]]<-gam(log(nominal_cpue)~s(year,bs="tp")+s(month,bs="cc")+s(new_vess
 fits_pos[[2]]<-gam(log(nominal_cpue)~s(year,bs="tp")+s(month,bs="cc")+s(new_vessel_id,bs="re")+s(long,lat,bs="ds")+s(pdo,bs="tp"),
                    data=dat_pos,family=gaussian(link="identity"),method="REML") 
 
-fits_pos[[3]]<-gam(log(nominal_cpue)~s(year,bs="tp")+s(month,bs="cc",=12)+s(new_vessel_id,bs="re")+s(long,lat,bs="ds")+s(enso,bs="tp"),
+fits_pos[[3]]<-gam(log(nominal_cpue)~s(year,bs="tp")+s(month,bs="cc")+s(new_vessel_id,bs="re")+s(long,lat,bs="ds")+s(enso,bs="tp"),
                    data=dat_pos,family=gaussian(link="identity"),method="REML") 
 
 # Phase 3. Base model + global env var (with temporal interaction)
